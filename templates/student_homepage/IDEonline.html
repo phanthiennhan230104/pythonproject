@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/IDEonline.css' %}">
+    <title>IDE ONLINE</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-head">
+                        <div class="inner-logo">
+                            <img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t1.15752-9/509617644_1412222906577794_4739279048360180404_n.png?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=93bp-KCXyKIQ7kNvwGfnJZD&_nc_oc=AdkReJIhOEZUQUi038njdwsrihij8JneijTW7hbgvPYz_XS_gyfgXAO1zEfPFwZGZKOk6KxENOV5l8ezFkdMVruG&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&oh=03_Q7cD2gGUg1JEd2OLigqSAUc9v_NRJzkax7WaNG01NkhIyoARKA&oe=688410C3" alt="Logo">
+                        </div>
+                        <div class="inner-menu">
+                            <ul>
+                                <li>
+                                    <a href="">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="">E-LEARNING</a>
+                                </li>
+                                <li>
+                                    <a href="">AI SUPPORTER</a>
+                                </li>
+                                <li>
+                                    <a href="">ABOUT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-log">
+                            <ul>
+                                <li>
+                                    <a href="">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-wrapper">
+        <div class="container">
+            <div class="hero">
+                <h1>IDE ONLINE</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="ide-section">
+        <div class="container">
+            <div class="toolbar">
+                <button><img src="https://i.postimg.cc/jjTRH5tz/folder-3.png" alt="Folder" /></button>
+                <button><img src="https://i.postimg.cc/LX1D8NwT/save.png" alt="Save" /></button>
+                <button><img src="https://i.postimg.cc/T1BKf6mC/eraser.png" alt="Eraser" /></button>
+                <button><img src="https://i.postimg.cc/hvnSrtLF/arrow.png" alt="Return" /></button>
+                <button><img src="https://i.postimg.cc/PrG6S8vv/right-arrow.png" alt="Right return" /></button>
+            </div>
+
+            <div class="tab-header">
+                    <span class="tab">main.py</span>
+                    <button class="tab-add-btn">+</button>
+                </div>
+                
+            <div class="editor-area">
+                <div class="editor-wrapper">
+                    <div class="line-numbers" id="lineNumbers">1</div>
+                    <textarea id="codeArea" class="code-editor" placeholder="Write your code here..."></textarea>
+                </div>
+
+                <div class="editor-footer">
+                    <span>Ln: 1, Col: 1</span>
+                </div>
+            </div>
+
+            <div class="run-btn-wrapper">
+                <button class="run-btn">Run</button>
+            </div>
+
+
+            <div class="output-area">
+                <textarea class="output" placeholder="Output..."></textarea>
+                <button class="expand-btn">
+                <img src="https://i.postimg.cc/Fz77QS53/zoom-in.png" alt="Expand">
+                </button>
+            </div>
+
+            <a href="{% url 'authentication:student_homepage' %}">
+                <div class="back-btn-wrapper">
+                    <button class="back-btn">BACK</button>
+                </div>
+            </a>
+            
+        </div>
+    </section>            
+        
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <p>© 2023 Project for CS466 - PERL & PYTHON | Duy Tan University</p>
+            <p>Instructor: tranhminhdang@dtu.edu.vn</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,141 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.inner-head{
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inner-head .inner-logo img{
+    width: 100px;
+    height: auto;
+}
+
+.inner-head .inner-menu ul, .inner-log ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.inner-head .inner-menu ul li a,
+.inner-head .inner-log ul li a {
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.inner-head .inner-menu ul li:hover a,
+.inner-head .inner-log ul li:hover a {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-wrapper {
+    padding: 0; 
+}
+
+.hero {
+    background-color: var(--light); 
+    text-align: center;
+    padding: 1rem 0;
+    border-radius: 6px; 
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+.features {
+    padding: 2rem 0;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center; 
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    display: flex;              
+    flex-direction: column;    
+    align-items: center;       
+    text-align: center;        
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-card h3 {
+    color: var(--secondary);
+    margin-top: 0;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+footer {
+    padding: 0;
+    text-align: center;
+}
+
+footer .container {
+    background-color: var(--dark); 
+    color: white;
+    border-radius: 6px;
+    padding: 1rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
