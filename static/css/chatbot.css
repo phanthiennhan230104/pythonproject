@@ -1,0 +1,117 @@
+:root {
+    --font-1: 'Segoe UI', sans-serif;
+    --bg-1: #f7f7f7;
+    --color-text: #222;
+    --color-title: #d62828;
+    --primary: #007bff;
+    --secondary: #0056b3;
+    --accent: #f77f00;
+    --light: #ffffff;
+}
+
+body {
+    font-family: var(--font-1);
+    background-color: var(--bg-1);
+    color: var(--color-text);
+    padding: 40px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--color-title);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.back-button {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.chat-input {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #F1751D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d45d13;
+}
+
+.chat-box {
+    background-color: var(--light);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.message {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.user {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.bot {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.bot-reply pre {
+    background-color: #1e1e1e;
+    color: #f8f8f2;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: 'Fira Code', 'Courier New', monospace;
+    margin-top: 5px;
+}
+button[type="submit"][style*="background-color: #dc3545"] {
+    background-color: #dc3545;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button[type="submit"][style*="background-color: #dc3545"]:hover {
+    background-color: #c82333;
+}

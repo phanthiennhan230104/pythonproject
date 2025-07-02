@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Student</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap & Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/add_student.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-head">
+                        <div class="inner-logo">
+                            <img src="/static/img/logo.png" alt="">
+                        </div>
+                        <div class="inner-menu">
+                            <ul>
+                                <li>
+                                    <a href="{% url 'authentication:teacher_homepage' %}">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="">MANAGE</a>
+                                </li>
+                                <li>
+                                    <a href="">AI SUPPORTER</a>
+                                </li>
+                                <li>
+                                    <a href="">ABOUT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-log">
+                            <ul>
+                                <li>
+                                    <a href="">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'authentication:signout' %}">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>ADD STUDENT</h1>
+        <div class="content-box">
+            <form>
+                <label for="id">ID:</label>
+                <input id="id" type="text" />
+
+                <label for="name">Name:</label>
+                <input id="name" type="text" />
+
+                <label for="email">Email:</label>
+                <input id="email" type="email" />
+
+                <label for="class">Class:</label>
+                <input id="class" type="text" />
+
+                <label for="password">Password:</label>
+                <div class="password-wrapper">
+                    <input id="password" type="password" />
+                    <i class="fa-solid fa-eye toggle-password" toggle="#password"></i>
+                </div>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <div class="password-wrapper">
+                    <input id="confirm-password" type="password" />
+                    <i class="fa-solid fa-eye toggle-password" toggle="#confirm-password"></i>
+                </div>
+
+                <div class="submit-btn">
+                    <button type="submit" class="btn-add">Add Student</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="inner-content">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">GIỚI THIỆU</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">LIÊN HỆ</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">ĐIỀU KHOẢN</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">BẢO MẬT</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        document.querySelectorAll('.toggle-password').forEach(function (icon) {
+            icon.addEventListener('click', function () {
+                const input = document.querySelector(this.getAttribute('toggle'));
+                const isPassword = input.getAttribute('type') === 'password';
+                input.setAttribute('type', isPassword ? 'text' : 'password');
+                this.classList.toggle('fa-eye');
+                this.classList.toggle('fa-eye-slash');
+            });
+        });
+    </script>
+</body>
+
+</html>

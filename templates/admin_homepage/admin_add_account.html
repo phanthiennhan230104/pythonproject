@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/admin-add-account.css">
+    <title>Admin Mode | CS466</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-head">
+                        <div class="inner-logo">
+                            <img src="/static/img/logo.png" alt="">
+                        </div>
+                        <div class="logo">ADMIN MODE</div>
+                        <div class="inner-log">
+                            <ul>
+                                <li>
+                                    <a href="">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">ADD ACCOUNT</h2>
+                <div class="permission-box">
+                    <form class="form-add-account">
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fullname">Name:</label>
+                            <input type="text" id="fullname" name="fullname" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="role">Role:</label>
+                            <select id="role" name="role" required>
+                                <option value="">-- Select Role --</option>
+                                <option value="admin">Admin</option>
+                                <option value="teacher">Teacher</option>
+                                <option value="student">Student</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="Password" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm password:</label>
+                            <input type="password" id="confirm-password" name="confirm-password" required>
+                        </div>
+
+                        <div class="permission-actions">
+                            <a href="admin_manage_account.html" class="back-btn">BACK</a>
+                            <button type="submit" class="save-btn">SAVE</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="inner-content">
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+                        <div class="inner-part">
+                            <p class="inner-title">TERMS</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="inner-part">
+                            <p class="inner-title">SECURITY</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

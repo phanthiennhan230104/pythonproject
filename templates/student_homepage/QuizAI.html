@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Quiz Generator</title>
+    <link rel="stylesheet" href="{% static 'css/quizai.css' %}">
+</head>
+<body>
+<div class="quizai-container">
+    <a href="{% url 'authentication:student_homepage' %}" class="back-button">← Back to Homepage</a>
+    
+    <h1>🧠 AI Quiz Generator</h1>
+
+    <form method="POST" class="quiz-form">
+        {% csrf_token %}
+        <textarea name="topic" rows="4" placeholder="Enter a topic to generate quiz..." required></textarea>
+        <button type="submit">Generate Quiz</button>
+    </form>
+
+    {% if quiz %}
+    <div class="quiz-result">
+        <h2>📋 Generated Quiz</h2>
+        {% for q in quiz %}
+        <div class="question-block">
+            <p><strong>Question {{ forloop.counter }}:</strong> {{ q.question }}</p>
+            {% for opt in q.options %}
+                <label>
+                    <input type="radio" name="q{{ forloop.parentloop.counter }}"
+                           value="{{ opt|slice:":1" }}"
+                           onclick="checkAnswer(this, '{{ q.answer }}')">
+                    {{ opt }}
+                </label><br>
+            {% endfor %}
+            <div class="result" style="display:none; margin-top: 5px;"></div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+
+<script>
+function checkAnswer(input, correctAnswer) {
+    const container = input.closest('.question-block');
+    const resultBox = container.querySelector('.result');
+    const userAnswer = input.value;
+
+    if (userAnswer === correctAnswer) {
+        resultBox.innerHTML = `<span style="color: green; font-weight: bold;">✅ Correct!</span>`;
+    } else {
+        resultBox.innerHTML = `<span style="color: red; font-weight: bold;">❌ Incorrect.</span> Correct answer: <strong>${correctAnswer}</strong>`;
+    }
+    resultBox.style.display = 'block';
+
+    // Disable all inputs in this question
+    const radios = container.querySelectorAll('input[type="radio"]');
+    radios.forEach(r => r.disabled = true);
+}
+</script>
+</body>
+</html>

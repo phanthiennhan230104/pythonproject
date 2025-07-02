@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary: #F1751D;
+    --secondary: #D9330A;
+    --accent: #C2000C;
+    --light: #FFF6F0;
+    --dark: #333333;
+    --success: #28a745;
+    --danger: #dc3545;
+    --highlight: #ffe9d6;
+    --font-main: "DM Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--light);
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+/* ===== HEADER ===== */
+.inner-head {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.inner-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.inner-menu ul,
+.inner-log ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.inner-menu ul li,
+.inner-log ul li {
+    margin: 0 15px;
+}
+
+.inner-menu ul li a,
+.inner-log ul li a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.inner-menu ul li a:hover,
+.inner-log ul li a:hover {
+    color: var(--highlight);
+}
+
+/* ===== MAIN ===== */
+main {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 32px;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.content-box {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 850px;
+    margin: auto;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    text-align: left;
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--dark);
+}
+
+textarea,
+select,
+input[type="text"],
+input[type="file"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    resize: vertical;
+    transition: border 0.2s ease-in-out;
+}
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus {
+    border-color: var(--primary);
+    outline: none;
+}
+
+/* ===== BUTTONS ===== */
+.submit-btn {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.btn-add {
+    background-color: var(--success);
+    color: white;
+}
+
+.btn-back {
+    background-color: var(--danger);
+    color: white;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+.footer .inner-content {
+    margin-top: 80px;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    padding: 30px 10px;
+}
+
+.inner-part {
+    text-align: center;
+    color: white;
+}
+
+.inner-part .inner-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.inner-part p {
+    font-size: 13px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .submit-btn {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .inner-head {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .inner-menu ul,
+    .inner-log ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

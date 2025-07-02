@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/Learning.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>LIST OF LECTURES</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-head">
+                        <div class="inner-logo">
+                            <img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t1.15752-9/509617644_1412222906577794_4739279048360180404_n.png?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=93bp-KCXyKIQ7kNvwGfnJZD&_nc_oc=AdkReJIhOEZUQUi038njdwsrihij8JneijTW7hbgvPYz_XS_gyfgXAO1zEfPFwZGZKOk6KxENOV5l8ezFkdMVruG&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&oh=03_Q7cD2gGUg1JEd2OLigqSAUc9v_NRJzkax7WaNG01NkhIyoARKA&oe=688410C3" alt="Logo">
+                        </div>
+                        <div class="inner-menu">
+                            <ul>
+                                <li>
+                                    <a href="">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="">E-LEARNING</a>
+                                </li>
+                                <li>
+                                    <a href="">AI SUPPORTER</a>
+                                </li>
+                                <li>
+                                    <a href="">ABOUT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-log">
+                            <ul>
+                                <li>
+                                    <a href="">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'authentication:signout' %}">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-wrapper">
+        <div class="container">
+            <div class="hero">
+                <h1 class="section-title">LIST OF LECTURES</h2>
+            </div>
+        </div>
+    </section>
+
+    <section class="lecture-list">
+        <div class="container">
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Chapter</th>
+                            <th>Lesson name</th>
+                            <th>Function</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <td>Lesson 1 - Chapter 1: Lesson title</td>
+                        <td>1</td>
+                        <td><a href="#">View</a></td>
+                        </tr>
+                        <tr>
+                        <td>Lesson 2 - Chapter 2: Lesson title</td>
+                        <td>2</td>
+                        <td><a href="#">View</a></td>
+                        </tr>
+                    </tbody>            
+                </table>
+            </div>
+            
+            <a href="{% url 'authentication:student_homepage' %}">
+                <div class="back-btn-wrapper">
+                    <button class="back-btn">BACK</button>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <p>© 2023 Project for CS466 - PERL & PYTHON | Duy Tan University</p>
+            <p>Instructor: tranhminhdang@dtu.edu.vn</p>
+        </div>
+    </footer>
+</body>
+</html>
+

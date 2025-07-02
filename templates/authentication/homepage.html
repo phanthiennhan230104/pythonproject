@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOMEPAGE</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/homepage.css" />
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-head">
+                        <div class="inner-logo">
+                            <img src="/static/img/logo.png" alt="Logo">
+                        </div>
+                        <div class="inner-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'ai:chatbot' %}">AI SUPPORTER</a>
+                                </li>
+                                <li>
+                                    <a href="#">ABOUT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-log">
+                            <ul class="auth-links">
+                                <li><a href="{% url 'authentication:signin' %}">LOGIN</a></li>
+                                <li><a href="{% url 'authentication:signup' %}" method="POST">REGISTER</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="container text-center my-5">
+        <h1 class="display-4 font-weight-bold">AI-INTEGRATED LEARNING SYSTEM FOR PERL & PYTHON</h1>
+        <div class="grid-container">
+            <p class="lead">Group Project CS466 - Design and Development of an AI-Integrated E-Learning Website for PERL
+                & PYTHON Courses</p>
+        </div>
+        <a href="#" class="btn   btn-lg mt-3">
+            <i class="fas fa-play-circle"></i> START NOW
+        </a>
+        <section class="features py-5 bg-white">
+            <div class="container">
+                <h2 class="text-center section-title mb-4">Key Features</h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card p-4 text-center shadow-sm rounded bg-light h-100">
+                            <div class="feature-icon mb-3">📚</div>
+                            <h5 class="font-weight-bold">Course & Lecture Management</h5>
+                            <p>Diverse lecture materials including text, PDFs, videos, and slides, with clear objectives
+                                and illustrative examples.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card p-4 text-center shadow-sm rounded bg-light h-100">
+                            <div class="feature-icon mb-3">💻</div>
+                            <h5 class="font-weight-bold">Online Coding Practice</h5>
+                            <p>An online IDE with syntax highlighting and real-time code execution for both Perl and
+                                Python, integrated with a secure sandbox environment.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card p-4 text-center shadow-sm rounded bg-light h-100">
+                            <div class="feature-icon mb-3">🤖</div>
+                            <h5 class="font-weight-bold">AI Supporter</h5>
+                            <p>An AI-powered chatbot that answers questions, suggests code fixes, evaluates programming
+                                proficiency, and generates quiz questions automatically.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card p-4 text-center shadow-sm rounded bg-light h-100">
+                            <div class="feature-icon mb-3">📝</div>
+                            <h5 class="font-weight-bold">Assignment Management</h5>
+                            <p>Create and submit assignments in the form of code, multiple-choice questions, or file
+                                uploads, with automatic grading support.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card p-4 text-center shadow-sm rounded bg-light h-100">
+                            <div class="feature-icon mb-3">🔒</div>
+                            <h5 class="font-weight-bold">High Security</h5>
+                            <p>Two-factor authentication (2FA), fine-grained access control, system logging, and
+                                scheduled backups.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="feature-card p-4 text-center shadow-sm rounded bg-light h-100">
+                            <div class="feature-icon mb-3">📊</div>
+                            <h5 class="font-weight-bold">Statistics & Reports</h5>
+                            <p>Track learning progress and grades, and export reports in PDF or Excel formats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="inner-content">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">GIỚI THIỆU</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">LIÊN HỆ</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">ĐIỀU KHOẢN</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">BẢO MẬT</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.inner-menu');
+            menuToggle.addEventListener('click', function () {
+                menu.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

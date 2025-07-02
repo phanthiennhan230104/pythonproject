@@ -1,0 +1,146 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.inner-head{
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inner-head .inner-logo img{
+    width: 100px;
+    height: auto;
+}
+
+
+.inner-head .inner-menu ul, .inner-log ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.inner-head .inner-menu ul li{
+    margin: 0 25px;
+}
+
+.inner-head .inner-menu ul li a{
+    color: white;
+}
+
+.inner-head .inner-log ul li{
+    margin: 0 20px;
+}
+
+.inner-head .inner-log ul li a{
+    color: white;
+}
+
+.inner-title{
+    margin: 80px 0;
+}
+
+.inner-title p{
+    color: var(--color-title);
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+}
+.logo {
+    color: white;
+    font-size: 1.8rem;
+    height: 60px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.features {
+    padding: 4rem 1rem;
+    flex: 1;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card h3 {
+    color: var(--secondary);
+    margin-top: 0;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+.footer .inner-content {
+    margin-top: 80px;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    padding: 20px;
+}
+
+.inner-part .inner-title {
+    margin: 0;
+}
+
+.inner-part p {
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    padding: 0;
+    color: white;
+    margin: 0;
+}
+
+.inner-part .inner-title {
+    font-weight: bold;
+}
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 0.5rem;
+    }
+}

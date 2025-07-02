@@ -1,0 +1,212 @@
+:root {
+    --primary: #F1751D;
+    --secondary: #D9330A;
+    --accent: #C2000C;
+    --light: #FFF5EE;
+    --dark: #333333;
+    --success: #28a745;
+    --danger: #dc3545;
+    --font-1: "DM Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-1);
+}
+
+.inner-head {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inner-head .inner-logo img {
+    width: 100px;
+    height: auto;
+}
+
+.inner-head .inner-menu ul,
+.inner-log ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.inner-head .inner-menu ul li {
+    margin: 0 25px;
+}
+
+.inner-head .inner-menu ul li a {
+    color: white;
+}
+
+.inner-head .inner-log ul li {
+    margin: 0 20px;
+}
+
+.inner-head .inner-log ul li a {
+    color: white;
+}
+
+.inner-title {
+    margin: 80px 0;
+}
+
+.inner-title p {
+    color: var(--color-title);
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0;
+}
+
+/* Main */
+main {
+    padding: 40px 20px;
+}
+
+main h1 {
+    color: var(--accent);
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.content-box {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    color: var(--dark);
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(241, 117, 29, 0.2);
+    outline: none;
+}
+
+/* Password toggle */
+.password-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.password-wrapper input {
+    width: 100%;
+    height: 50px;
+    /* ⬅️ Tăng chiều cao lên */
+    padding: 12px 45px 12px 15px;
+    /* chừa phải đủ cho icon */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    box-sizing: border-box;
+}
+
+
+.toggle-password {
+    position: absolute;
+    top: 45%;
+    /* càng nhỏ icon càng lên cao */
+    right: 15px;
+    transform: translateY(-65%);
+    cursor: pointer;
+    color: #666;
+    font-size: 16px;
+    background: transparent;
+    line-height: 1;
+}
+
+
+
+
+
+/* Button */
+.btn-add {
+    background: var(--success);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-add:hover {
+    background: #218838;
+    transform: translateY(-2px);
+}
+
+.footer .inner-content {
+    margin-top: 80px;
+    background: linear-gradient(135deg, var(--secondary), var(--primary));
+    padding: 20px;
+}
+
+.inner-part .inner-title {
+    margin: 0;
+}
+
+.inner-part p {
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    padding: 0;
+    color: white;
+    margin: 0;
+}
+
+.inner-part .inner-title {
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .inner-head {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .inner-head ul {
+        flex-direction: column;
+    }
+
+    .content-box {
+        padding: 20px;
+    }
+
+    .footer .inner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

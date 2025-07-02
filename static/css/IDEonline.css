@@ -1,0 +1,313 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--dark);
+    line-height: 1.6;
+}
+
+.inner-head{
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inner-head .inner-logo img{
+    width: 100px;
+    height: auto;
+}
+
+.inner-head .inner-menu ul, .inner-log ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+.inner-head .inner-menu ul li a,
+.inner-head .inner-log ul li a {
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.inner-head .inner-menu ul li:hover a,
+.inner-head .inner-log ul li:hover a {
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-wrapper {
+    padding: 0; 
+}
+
+.hero {
+    background-color: var(--light);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: var(--secondary);
+    margin-bottom: 2rem;
+}
+
+.ide-section {
+  background-color: var(--light);
+  padding: 1.5rem 0;
+  text-align: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 6px;
+}
+
+.ide-section .container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.toolbar {
+  display: flex;
+  gap: 0rem;
+  margin-bottom: 1rem;
+}
+
+.toolbar img {
+  width: 26px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.editor-area {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  border: 1px solid #ccc;
+}
+
+.tab-header {
+  display: flex;
+  align-items: center;
+  background-color: #e5e5e5;
+  border-radius: 4px 4px 0 0;
+  padding: 0.3rem 0.6rem;
+  width: fit-content;
+}
+
+.tab {
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: white;
+  padding: 4px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 4px 0 0;
+  margin-right: 4px;
+}
+
+.tab-add-btn {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 2px 6px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.tab-add-btn:hover {
+  background-color: rgb(238, 230, 230);
+}
+
+.editor-header .img {
+  width: 5px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.editor {
+  width: 100%;
+  height: 200px;
+  padding: 1rem;
+  font-family: monospace;
+  resize: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+.editor-body {
+  display: flex;
+  width: 100%;
+  position: relative;
+}
+
+.editor-wrapper {
+  display: flex;
+  border: 1px solid #ccc;
+  border-top: none;
+  height: 300px;
+  overflow: hidden;
+}
+
+.line-numbers {
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  padding: 1rem 0.5rem;
+  text-align: right;
+  font-family: monospace;
+  font-size: 14px;
+  color: #555;
+  user-select: none;
+  min-width: 30px;
+}
+
+.code-editor {
+  flex-grow: 1;
+  font-family: monospace;
+  font-size: 14px;
+  border: none;
+  padding: 10px;
+  resize: none;
+  outline: none;
+  height: 100%;
+  width: 100%;
+  line-height: 1.5;
+}
+
+.editor-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #e0e0e0;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.run-btn-wrapper {
+  text-align: left;
+}
+
+.run-btn {
+  margin-top: 0rem;
+  margin-bottom: 2rem;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  clear: both;
+}
+
+.run-btn:hover {
+  background-color: #a0000a;
+}
+
+.output-area {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  padding: 1rem;
+  position: relative;
+}
+
+.output {
+  width: 100%;
+  height: 200px;
+  font-family: monospace;
+  resize: none;
+  border: none;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.expand-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.expand-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.expand-btn:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.back-btn-wrapper {
+  text-align: right;
+  margin-top: 1rem;
+  margin-right: 4rem;
+}
+
+.back-btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.6rem 1.5rem;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  clear: both;
+}
+
+.back-btn:hover {
+  background-color: #a0000a;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+}
+
+footer .container {
+    background-color: var(--dark); 
+    color: white;
+    border-radius: 6px;
+    padding: 1rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}

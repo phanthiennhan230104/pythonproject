@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Chapter</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/edit_chapter.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-head">
+                        <div class="inner-logo">
+                            <img src="/static/img/logo.png" alt="">
+                        </div>
+                        <div class="inner-menu">
+                            <ul>
+                                <li>
+                                    <a href="{% url 'authentication:teacher_homepage' %}">HOME</a>
+
+                                </li>
+                                <li>
+                                    <a href="">MANAGE</a>
+                                </li>
+                                <li>
+                                    <a href="">AI SUPPORTER</a>
+                                </li>
+                                <li>
+                                    <a href="">ABOUT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-log">
+                            <ul>
+                                <li>
+                                    <a href="">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'authentication:signout' %}">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1>EDIT CHAPTER</h1>
+        <div class="content-box">
+            <form>
+                <label for="tenchuong">Chapter Title:</label>
+                <textarea id="tenchuong" rows="2"></textarea>
+
+                <label for="gioithieu">Introduction:</label>
+                <textarea id="gioithieu" rows="2"></textarea>
+
+                <label for="noidung">Content:</label>
+                <textarea id="noidung" rows="2"></textarea>
+
+                <label for="vidu">Examples:</label>
+                <textarea id="vidu" rows="2"></textarea>
+
+                <div class="file-upload">
+                    <label for="baitap">Exercises:</label>
+                    <input type="file" id="baitap" />
+                </div>
+
+                <div class="submit-btn">
+                    <a href="{%url 'teacher:manage_chapter'%}">
+                        <div class="back-btn">
+                            <button class="btn-back">BACK</button>
+                        </div>
+                    </a>
+                    <button type="submit" class="btn-add">Update Chapter</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="inner-content">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">GIỚI THIỆU</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">LIÊN HỆ</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">ĐIỀU KHOẢN</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="inner-part">
+                            <p class="inner-title">BẢO MẬT</p>
+                            <p class="inner-desc">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

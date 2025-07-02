@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ELearning.css' %}">
+    <title>E-LEARNING</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="inner-head">
+                        <div class="inner-logo">
+                            <img src="https://scontent-hkg1-2.xx.fbcdn.net/v/t1.15752-9/509617644_1412222906577794_4739279048360180404_n.png?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=93bp-KCXyKIQ7kNvwGfnJZD&_nc_oc=AdkReJIhOEZUQUi038njdwsrihij8JneijTW7hbgvPYz_XS_gyfgXAO1zEfPFwZGZKOk6KxENOV5l8ezFkdMVruG&_nc_zt=23&_nc_ht=scontent-hkg1-2.xx&oh=03_Q7cD2gGUg1JEd2OLigqSAUc9v_NRJzkax7WaNG01NkhIyoARKA&oe=688410C3" alt="Logo">
+                        </div>
+                        <div class="inner-menu">
+                            <ul>
+                                <li>
+                                    <a href="">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="">E-LEARNING</a>
+                                </li>
+                                <li>
+                                    <a href="">AI SUPPORTER</a>
+                                </li>
+                                <li>
+                                    <a href="">ABOUT US</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="inner-log">
+                            <ul>
+                                <li>
+                                    <a href="">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'authentication:signout' %}">Log out</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-wrapper">
+        <div class="container">
+            <div class="hero">
+                <h1>E-LEARNING</h1>
+                <p>
+                    The online learning system is designed to help students access knowledge flexibly, anytime and anywhere. 
+                    This allows students to take initiative in their studies and improve their programming skills.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card" onclick="location.href='{% url 'student:learning' %}'" style="cursor: pointer;">
+                    <div class="feature-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/337/337946.png" alt="PDF Icon" style="width: 50px; height: 50px;">
+                    </div>
+                    <h3>Learning</h3>
+                    <p>
+                        Lecture content is organized by topic, allowing students to easily follow, study, and review knowledge.
+                    </p>
+                </div>
+
+                <div class="feature-card" onclick="location.href='{% url 'student:practice' %}'" style="cursor: pointer;">
+
+                    <div class="feature-icon">
+                        <img src="https://i.postimg.cc/2jZfPrzZ/practice-png.png" alt="Practice Icon" style="width: 50px; height: 50px;">
+                    </div>
+                    <h3>Practice</h3>
+                    <p>
+                        A variety of practical exercises help reinforce theoretical knowledge and enhance problem-solving skills.
+                    </p>
+                </div>
+
+                <div class="feature-card" onclick="location.href='{% url 'student:quizAI' %}'" style="cursor: pointer;">
+                    <div class="feature-icon">
+                        <img src="/static/img/quiz.png" alt="Quizzes AI-Generated" style="width: 50px; height: 50px;">
+                    </div>
+                    <h3>AI-Generated Practice Quizzes</h3>
+                    <p>
+                        Automatically generate customized practice quizzes using AI based on course content or user input. This feature helps students reinforce knowledge, identify weaknesses, and prepare for exams effectively.
+                    </p>
+                </div>
+
+                <div class="feature-card" onclick="location.href='{% url 'student:ide' %}'" style="cursor: pointer;">
+                    <div class="feature-icon">
+                        <img src="https://i.postimg.cc/fyxpkWLq/learning.png" alt="Editor Icon" style="width: 50px; height: 50px;">
+                    </div>
+                    <h3>Online IDE</h3>
+                    <p>
+                        Allows students to write, run, and test code directly on the platform without needing to install any software.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">Terms</a>
+                <a href="#">Privacy</a>
+            </div>
+            <p>© 2023 Project for CS466 - PERL & PYTHON | Duy Tan University</p>
+            <p>Instructor: tranhminhdang@dtu.edu.vn</p>
+        </div>
+    </footer>
+</body>
+</html>
